@@ -1,0 +1,107 @@
+body {
+            background-color: #eee;
+            font-family: Tahoma, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: brown;
+            font-family: Georgia, serif;
+            font-size: 36px;
+        }
+
+        p {
+            font-family: Tahoma, sans-serif;
+            color: orange;
+        }
+
+        b {
+            font-size: 20px;
+        }
+
+        u {
+            color: red;
+        }
+
+        i {
+            font-size: 36px;
+        }
+
+        a {
+            color: rgb(214, 16, 16);
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        
+
+.box {
+            background-color: white;
+            width: 600px;
+            margin: 50px auto;
+            border: 1px solid black;
+            padding: 20px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        }
+
+/* สีเน้นหัวข้อ */
+.topic {
+    color: blue;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* คำว่า Thailand */
+#keyword {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* ขีดเส้นใต้ constitutional monarchy */
+.underline {
+    text-decoration: underline;
+}
+
+/* ตัวเอียง in May 2014 */
+.italic {
+    font-style: italic;
+}
+
+/* หัวข้อย่อย: ทึบ บาง และเน้น */
+.topic2 {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* กล่องข้อความ */
+.textbox {
+    width: 300px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.gray-bg{
+    background-color: gray;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+tr:hover td {
+  background-color: lightblue;
+}
