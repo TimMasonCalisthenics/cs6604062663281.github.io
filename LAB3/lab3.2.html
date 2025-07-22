@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มจองทัวร์</title>
+</head>
+<body>
+    <h1>แบบฟอร์มจองทัวร์</h1>
+<form action="form-echo.php" method="get" enctype="multipart/form-data">
+  <fieldset>
+    <legend><strong>แบบฟอร์มจองทัวร์</strong></legend>
+
+    <fieldset>
+      <legend>ข้อมูลทั่วไป</legend>
+      ชื่อ-สกุล: <input type="text" name="fullname" required><br><br>
+      Email: <input type="email" name="email" required><br><br>
+      โทรศัพท์: <input type="tel" name="phone" pattern="^(\+66|0)[0-9]{8,9}$" required><br><br>
+      ที่อยู่:<br>
+      <textarea name="address" rows="3" cols="30" required></textarea><br><br>
+      รหัสไปรษณีย์ : <input type="text" name="post" required><br><br>
+
+      วัตถุประสงค์:
+      <input type="file" name="file"><small> (เลือกไฟล์ได้)</small>
+    </fieldset>
+    <br>
+
+
+    <fieldset>
+      <legend>ข้อมูลเข้าสู่ระบบ</legend>
+      Username:
+      <input type="text" name="username" pattern="[A-Za-z0-9_]{8,}" title="ต้องมีอย่างน้อย 8 ตัว ประกอบด้วยตัวอักษร/ตัวเลข/_ เท่านั้น" required><br><br>
+
+      Password:
+      <input type="password" name="password" pattern=".{8,}" title="ต้องมีอย่างน้อย 8 ตัวอักษร" required><br>
+    </fieldset>
+    <br>
+
+    <fieldset>
+      <legend>ข้อมูลทัวร์ที่ต้องการ</legend>
+      แพ็คเกจทัวร์ :
+      <select name="country" required>
+        <option value=""> --select-- </option>
+        <option value="ญี่ปุ่น">ญี่ปุ่น</option>
+        <option value="เกาหลีใต้">เกาหลีใต้</option>
+        <option value="เวียดนาม">เวียดนาม</option>
+      </select><br><br>
+
+      วันที่เดินทาง:
+      <input type="date" name="travel_date" required><br><br>
+
+      จำนวนผู้เดินทาง:
+      <input type="number" name="passengers" min="1" max="10" required><br><br>
+
+      เน้นการท่องเที่ยวแบบใด:<br>
+      <input type="radio" name="package" value="ชอบผจญภัย" required> ชอบผจญภัย<br>
+      <input type="radio" name="package" value="ธรรมชาติ"> ธรรมชาติ<br>
+      <input type="radio" name="package" value="ทะเล"> ทะเล<br><br>
+
+      ยอมรับเงื่อนไขและข้อตกลง <input type="checkbox" name="agreement" value="agree" required> I agree  <input type="checkbox" name="agreement" value="disagree" required> I disagree <input type="submit" value="จอง">  
+
+         
+    </fieldset>
+  </fieldset>
+</form>
+    
+</body>
+</html>

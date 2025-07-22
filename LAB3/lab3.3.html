@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>เข้าสู่ระบบ</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .login-box { width: 300px; border: 1px solid #ccc; padding: 20px; }
+    #success-box { display: none; }
+  </style>
+</head>
+<body onload="document.getElementById('username').focus();">
+
+  <div id="login-box" class="login-box">
+    <h2>เข้าสู่ระบบ</h2>
+    <form id="loginForm" onsubmit="return validateLogin();">
+      <label>Username:</label><br>
+      <input type="text" id="username" required><br><br>
+
+      <label>Password:</label><br>
+      <input type="password" id="password" required><br><br>
+
+      <label>กรุณาพิมพ์ตามตัวเลขที่ปรากฏ: <b>1559</b></label><br>
+      <input type="text" id="captcha" required><br><br>
+
+      <button type="submit">LOGIN</button>
+    </form>
+  </div>
+
+  <div id="success-box">
+    <h2>...เข้าสู่ระบบแล้ว...</h2>
+    <button onclick="logout()">Logout</button>
+    <p>กดเพื่อกลับไปยังหน้าเข้าสู่ระบบ</p>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const user = document.getElementById('username').value.trim();
+      const pass = document.getElementById('password').value.trim();
+      const captcha = document.getElementById('captcha').value.trim();
+
+      if (user === '' || pass === '' || captcha !== '1559') {
+        alert("กรุณากรอกข้อมูลให้ครบถ้วน และตรวจสอบรหัสยืนยันให้ถูกต้อง");
+        return false;
+      }
+
+      document.getElementById('login-box').style.display = 'none';
+      document.getElementById('success-box').style.display = 'block';
+      return false; // ป้องกันการ reload
+    }
+
+    function logout() {
+      document.getElementById('login-box').style.display = 'block';
+      document.getElementById('success-box').style.display = 'none';
+      document.getElementById('loginForm').reset();
+      document.getElementById('username').focus();
+    }
+  </script>
+
+</body>
+</html>

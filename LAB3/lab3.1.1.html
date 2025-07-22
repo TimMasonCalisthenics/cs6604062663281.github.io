@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>ข้อ 1.2 จงใช้ pattern Attribute เพื่อตรวจสอบรูปแบบของข้อมูลต่อไปนี้</h2>
+  <form>
+    11. รหัสสมาชิก 5 อักษรขึ้นต้นไป ต้องขึ้นต้นด้วย A-Z แล้วตามด้วย a-z และตัวเลข:
+    <input type="text" name="member_code" pattern="[A-Z][a-z]+\d*" title="ขึ้นต้นด้วยตัวใหญ่ ตามด้วยตัวเล็ก และตัวเลข"><br><br>
+
+    12. บ้านเลขที่ เช่น 235/4 69:
+    <input type="text" name="house_number" pattern="\d+\/?\d*\s\d+" title="รูปแบบเช่น 235/4 69"><br><br>
+
+    13. รหัสสินค้า 3 ตัวแรกเป็นตัวอักษรใหญ่ ตามด้วยตัวเลข 2 ตัวเท่านั้น เช่น AAA89:
+    <input type="text" name="product_code" pattern="[A-Z]{3}\d{2}" title="เช่น AAA89"><br><br>
+
+    14. กรอกชื่อ นามสกุล ด้วยภาษาไทยเท่านั้น:
+    <input type="text" name="thai_name" pattern="^[ก-๙\s]+$" title="กรุณาใช้ภาษาไทยเท่านั้น"><br><br>
+</body>
+</html>
